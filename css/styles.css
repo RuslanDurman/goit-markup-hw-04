@@ -92,6 +92,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .contacts {
     display: flex;
     margin-left: auto;
+    align-items: center;
 }
 
 .contacts .item + .item {
@@ -99,7 +100,8 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 .contacts .link {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     color: var(--primary-color);
     font-weight: 500;
     font-size: 14px;
@@ -112,10 +114,23 @@ h1, h2, h3, h4, h5, h6, p, ul {
     color: var(--accent-color);
 }
 
+.envelope,
+.smartphone {
+    margin-right: 10px;
+    fill: currentColor;
+    /* display: block;
+    position: relative;
+    margin-top: -2px; */
+
+}
+
 /* Герой-секція */
 
 .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
+    max-width: 1600px;
    background-color: var(--footer_background_color); 
+   margin: 0 auto;
    padding: 200px 0;
 }
 
@@ -136,6 +151,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
     padding: 10px 32px;
     margin: 0 auto;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
     border-radius: 4px;
     color: var(--hero-color);
     background-color: var(--accent-color);
@@ -201,6 +217,17 @@ h1, h2, h3, h4, h5, h6, p, ul {
     letter-spacing: 0.03em;
 }
 
+.feature-icon1 {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 270px;
+    height: 120px;
+    background-color: var(--secondary-background-color);
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
 /* Чим ми займаємося */
 
 .work-do {
@@ -226,7 +253,8 @@ h1, h2, h3, h4, h5, h6, p, ul {
     background-color: var(--secondary-background-color);
 }
 
-.team-name {
+.team-name,
+.regular {
     margin-bottom: 50px;
     color: var(--secondary-color);
     font-weight: 700;
@@ -271,6 +299,62 @@ h1, h2, h3, h4, h5, h6, p, ul {
     border-radius: 0px 0px 4px 4px;
     background-color: #FFFFFF;
 }
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.icons li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    fill: #AFB1B8;
+}
+
+.icons li:hover {
+    background-color: var(--accent-color);
+    fill: var(--hero-color);
+    border-radius: 50%;
+}
+
+/* Постійні клієнти */
+
+.regular-clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.regular-clients li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    color: #AFB1B8;
+    background-color: var(--hero-color);
+}
+
+.regular-clients li:not(:last-child) {
+    margin-right: 30px;
+}
+
+.regular-clients li:hover {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.client {
+    fill: currentColor;
+}
+
 /* Підвал сайту */
 
 .under {
@@ -306,6 +390,52 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .contact-ftr:hover,
 .contact-ftr:focus {
     color: var(--accent-color);
+}
+
+.nav-icons p {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--hero-color)
+}
+
+.contacts-ftr {
+    margin-right: 70px;
+}
+
+.container-ftr {
+    display: flex;
+}
+
+.icons-ft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.icons-ft li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    fill: var(--hero-color);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.icons-ft li:not(:last-child) {
+    margin-right: 10px;
+} 
+
+.icons-ft li:hover {
+    background-color: var(--accent-color);
+    color: var(--hero-color);
+    border-radius: 50%;
 }
 
 /* Портфоліо */
@@ -358,6 +488,10 @@ h1, h2, h3, h4, h5, h6, p, ul {
     margin-right: 30px;
     margin-bottom: 30px;
     border: 1px solid #EEEEEE;
+}
+
+.project-item:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-item:nth-child(3n) {
